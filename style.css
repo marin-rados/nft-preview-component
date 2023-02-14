@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --color-very-darkBlue:hsl(217, 54%, 11%);
+    --color-darkBlue:hsl(216, 50%, 16%);
+
+    --color-blue: hsl(215, 32%, 27%);
+    --color-soft-blue: hsl(215, 33%, 61%);
+    --color-cyan: hsl(178, 100%, 50%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-very-darkBlue);
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-darkBlue);
+    width: 80%;
+    border-radius: .7rem;
+}
+
+@media (min-width: 600px) {
+    .main-container {
+        width: 40%;   
+    }
+}
+
+@media (min-width: 900px) {
+    .main-container {
+        width: 20%;   
+    }
+}
+
+.image-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7%;
+    border-radius: .7rem;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.eye {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+}
+
+.eye-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 7%;
+}
+
+.nft-info {
+    display: flex;
+    flex-direction: row;
+    width: 93%;
+    justify-content: space-between;
+    padding: 5%;
+    align-items: center;
+}
+
+hr {
+    border: 1px solid var(--color-blue);
+    width: 85%;
+}
+
+.avatar-div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    padding: 7%;
+}
+
+.avatar {
+    display: flex;
+    width: 12%;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+h2 {
+    color: var(--color-white);
+    font-weight: 600;
+    font-size: 22px;
+    padding-bottom: 1rem;
+}
+
+p {
+    color: var(--color-soft-blue);
+    font-size: 18px;
+    line-height: 1.5rem;
+}
+
+.cyan {
+    color: var(--color-cyan);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+a:hover, h2:hover {
+    color: var(--color-cyan);
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.image-div:hover {
+    background-color: var(--color-cyan);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.image-div:hover .image {
+    background-color: var(--color-cyan);
+    opacity: 0.5;
+    transition: background-color .3s ease;
+  }
+  
+  .image-div:hover .eye {
+    opacity: 1;
+    transition: opacity .3s ease;
+  }
+  
